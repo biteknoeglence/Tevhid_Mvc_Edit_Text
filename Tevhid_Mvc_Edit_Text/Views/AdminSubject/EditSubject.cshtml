@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Subject
+
+@{
+    ViewBag.Title = "EditSubject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Kategori Güncelleme Sayfası</h2>
+@using(Html.BeginForm("EditSubject", "AdminSubject", FormMethod.Post))
+            {
+    <div class="form-group">
+        @Html.Label("Konu ID")
+        @Html.TextBoxFor(x => x.SubjectID, new { @class = "form-control" })
+        <br />
+        v class="form-group">
+        @Html.Label("Konu Adı")
+        @Html.TextBoxFor(x => x.SubjectName, new { @class = "form-control" })
+        <br />
+        v class="form-group">
+        @Html.Label("Kategori Açıklaması")
+        @Html.TextAreaFor(x => x.SubjectDescription, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Güncelle</button>
+     </div>
+}

@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Subject
+
+@{
+    ViewBag.Title = "AddSubject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Konu Ekleme Sayfası</h1>
+<br />
+
+@using (Html.BeginForm("AddSubject", "AdminSubject", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Konu Adı")
+        @Html.TextBoxFor(x => x.SubjectName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SubjectName)
+        <br /><br />
+        @Html.Label("Açıklama yazınız")
+        @Html.TextAreaFor(x => x.SubjectDescription, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SubjectDescription)
+        <br /><br />
+        <button class="btn btn-success">Kaydet</button>
+    </div>
+
+}
