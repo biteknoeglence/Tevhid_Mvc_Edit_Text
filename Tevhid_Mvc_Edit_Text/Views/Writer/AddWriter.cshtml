@@ -10,33 +10,37 @@
 
 @using (Html.BeginForm("AddWriter", "Writer", FormMethod.Post))
 { 
-    <div class="form-group">
-        @Html.Label("Ad-Soyad")
-        @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterName)
-        <br /><br />
-        @Html.Label("Mail")
-        @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterMail)
-        <br /><br />
-        @Html.Label("Şifre")
-        @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterPassword)
-        <br /><br />
-        @Html.Label("Eserleri")
-        @Html.TextBoxFor(x => x.WriterProduct, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterProduct)
-        <br /><br />
-        @Html.Label("Hakkında")
-        @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterAbout)
-        <br /><br />
-        @Html.Label("Fotoğraf")
-        @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.WriterImage)
-        <br /><br />
-        <button class="btn btn-info">Yazarı Ekle</button>
-    </div>
+<div class="form-group">
+    @Html.Label("Ad-Soyad")
+    @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterName)
+    <br /><br />
+    @Html.Label("Mail")
+    @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterMail)
+    <br /><br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterPassword)
+    <br /><br />
+    @Html.Label("Meslek")
+    @Html.TextBoxFor(x => x.WriterProfession, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterProfession)
+    <br /><br />
+    @Html.Label("Eserleri")
+    @Html.TextBoxFor(x => x.WriterProduct, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterProduct)
+    <br /><br />
+    @Html.Label("Hakkında")
+    @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterAbout)
+    <br /><br />
+    @Html.Label("Fotoğraf")
+    @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterImage)
+    <br /><br />
+    <button class="btn btn-info">Yazarı Ekle</button>
+</div>
 
 }
 
